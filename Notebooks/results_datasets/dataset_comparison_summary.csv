@@ -1,0 +1,5 @@
+dataset,samples,bona_fide,spoof,bona_fide_pct,spoof_pct,unique_resolutions,splits
+NUAA,12614,5105,7509,40.47,59.53,7,test; train
+LCC-FASD,18827,1942,16885,10.31,89.69,1132,LCC_FASD_development; LCC_FASD_evaluation; LCC_FASD_training
+CASIA-FASD,4063,995,3068,24.49,75.51,1,test; train
+AxonData,149,24,125,16.11,83.89,9,

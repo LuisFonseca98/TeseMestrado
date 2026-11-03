@@ -1,0 +1,41 @@
+{
+  "run_type": "safas",
+  "method": "adapted_sa_fas",
+  "target": "lcc_fasd",
+  "target_usage": "TEST ONLY - not loaded by this script",
+  "source_domain_ids": [
+    0,
+    2
+  ],
+  "epochs": 30,
+  "batch_size": 16,
+  "optimizer": "SGD",
+  "learning_rate": 0.005,
+  "momentum": 0.9,
+  "weight_decay": 0.0005,
+  "scheduler": "MultiStepLR",
+  "scheduler_milestones": [
+    15,
+    25
+  ],
+  "scheduler_gamma": 0.5,
+  "sep_weight": 0.1,
+  "temperature": 0.1,
+  "alpha": 0.995,
+  "align_start_epoch": 6,
+  "full_run_align_start_epoch": 6,
+  "two_views": true,
+  "image_size": 256,
+  "rgb_only": true,
+  "pretrained_imagenet": true,
+  "checkpoint_metric": "macro source-validation AUC",
+  "aligned_checkpoint_metric": "best macro source-validation AUC with PG-IRM active",
+  "inference": "mean of source-domain hyperplanes",
+  "classification_threshold": null,
+  "seed": 42,
+  "amp": true,
+  "device": "cuda",
+  "train_samples": 3861,
+  "val_samples": 1285,
+  "experiment_csv": "C:\\Users\\luisc\\Desktop\\Faculdade\\Cadeiras\\TESE\\reports\\experiments\\target_lcc_fasd.csv"
+}

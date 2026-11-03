@@ -1,0 +1,94 @@
+{
+  "model": "ResNet18 baseline",
+  "labels": {
+    "0": "bona_fide",
+    "1": "spoof"
+  },
+  "target": "nuaa",
+  "checkpoint": "C:\\Users\\luisc\\Desktop\\Faculdade\\Cadeiras\\TESE\\checkpoints\\baseline\\target_nuaa\\best_resnet18.pt",
+  "checkpoint_epoch": 25,
+  "checkpoint_best_macro_source_val_auc": 0.9829613004148114,
+  "threshold_protocol": {
+    "selection_data": "source validation only",
+    "method": "pooled EER",
+    "threshold": 0.8149381279945374,
+    "source_validation_eer": 0.07622377725137984,
+    "target_used_for_threshold_selection": false
+  },
+  "source_validation": {
+    "pooled": {
+      "auc": 0.9719598804436633,
+      "threshold": 0.8149381279945374,
+      "apcer": 0.07457870204374328,
+      "bpcer": 0.0778688524590164,
+      "acer": 0.07622377725137984,
+      "hter": 0.07622377725137984,
+      "balanced_accuracy": 0.9237762227486201,
+      "accuracy": 0.9249313396399146,
+      "tn": 450,
+      "fp": 38,
+      "fn": 208,
+      "tp": 2581,
+      "samples": 3277,
+      "bona_fide_samples": 488,
+      "spoof_samples": 2789
+    },
+    "by_domain_id": {
+      "1": {
+        "auc": 0.9660695300097581,
+        "threshold": 0.8149381279945374,
+        "apcer": 0.08061344868265828,
+        "bpcer": 0.09382716049382717,
+        "acer": 0.08722030458824273,
+        "hter": 0.08722030458824273,
+        "balanced_accuracy": 0.9127796954117573,
+        "accuracy": 0.9175712347354138,
+        "tn": 367,
+        "fp": 38,
+        "fn": 205,
+        "tp": 2338,
+        "samples": 2948,
+        "bona_fide_samples": 405,
+        "spoof_samples": 2543
+      },
+      "2": {
+        "auc": 0.9998530708198649,
+        "threshold": 0.8149381279945374,
+        "apcer": 0.012195121951219513,
+        "bpcer": 0.0,
+        "acer": 0.006097560975609756,
+        "hter": 0.006097560975609756,
+        "balanced_accuracy": 0.9939024390243902,
+        "accuracy": 0.9908814589665653,
+        "tn": 83,
+        "fp": 0,
+        "fn": 3,
+        "tp": 243,
+        "samples": 329,
+        "bona_fide_samples": 83,
+        "spoof_samples": 246
+      }
+    }
+  },
+  "unseen_target_test": {
+    "auc": 0.8071746923687668,
+    "threshold": 0.8149381279945374,
+    "apcer": 0.04877625412254817,
+    "bpcer": 0.7325996430696015,
+    "acer": 0.3906879485960748,
+    "hter": 0.3906879485960748,
+    "balanced_accuracy": 0.6093120514039252,
+    "accuracy": 0.69922174723227,
+    "tn": 899,
+    "fp": 2463,
+    "fn": 281,
+    "tp": 5480,
+    "samples": 9123,
+    "bona_fide_samples": 3362,
+    "spoof_samples": 5761
+  },
+  "files": {
+    "source_validation_predictions": "C:\\Users\\luisc\\Desktop\\Faculdade\\Cadeiras\\TESE\\results\\baseline\\target_nuaa\\source_validation_predictions.csv",
+    "target_test_predictions": "C:\\Users\\luisc\\Desktop\\Faculdade\\Cadeiras\\TESE\\results\\baseline\\target_nuaa\\target_test_predictions.csv"
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "model": "Adapted SA-FAS (ResNet18 + domain-aware SupCon + PG-IRM)",
+  "scope": "image-only",
+  "official_reproduction": false,
+  "labels": {
+    "0": "bona_fide",
+    "1": "spoof"
+  },
+  "target": "casia_fasd",
+  "checkpoint": "C:\\Users\\luisc\\Desktop\\Faculdade\\Cadeiras\\TESE\\checkpoints\\safas\\target_casia_fasd\\best_safas_aligned.pt",
+  "checkpoint_policy": "best macro source-validation AUC among epochs with PG-IRM active",
+  "checkpoint_epoch": 7,
+  "checkpoint_best_macro_source_val_auc": 0.9774430414160391,
+  "source_domain_ids": [
+    0,
+    1
+  ],
+  "align_start_epoch": 6,
+  "classifier_cosine_similarity": 0.9996480941772461,
+  "inference": "sigmoid(mean source-domain hyperplane logit)",
+  "threshold_protocol": {
+    "selection_data": "source validation only",
+    "method": "pooled EER",
+    "threshold": 0.23651622235774994,
+    "source_validation_eer": 0.05416314808709741,
+    "target_used_for_threshold_selection": false
+  },
+  "source_validation": {
+    "pooled": {
+      "auc": 0.9825551322486413,
+      "threshold": 0.23651622235774994,
+      "apcer": 0.05444028581150051,
+      "bpcer": 0.0538860103626943,
+      "acer": 0.05416314808709741,
+      "hter": 0.05416314808709741,
+      "balanced_accuracy": 0.9458368519129026,
+      "accuracy": 0.9456967213114754,
+      "tn": 913,
+      "fp": 52,
+      "fn": 160,
+      "tp": 2779,
+      "samples": 3904,
+      "bona_fide_samples": 965,
+      "spoof_samples": 2939
+    },
+    "by_domain_id": {
+      "0": {
+        "auc": 1.0,
+        "threshold": 0.23651622235774994,
+        "apcer": 0.0,
+        "bpcer": 0.0035714285714285713,
+        "acer": 0.0017857142857142857,
+        "hter": 0.0017857142857142857,
+        "balanced_accuracy": 0.9982142857142857,
+        "accuracy": 0.997907949790795,
+        "tn": 558,
+        "fp": 2,
+        "fn": 0,
+        "tp": 396,
+        "samples": 956,
+        "bona_fide_samples": 560,
+        "spoof_samples": 396
+      },
+      "1": {
+        "auc": 0.9548860828320782,
+        "threshold": 0.23651622235774994,
+        "apcer": 0.06291781360597719,
+        "bpcer": 0.12345679012345678,
+        "acer": 0.09318730186471699,
+        "hter": 0.09318730186471699,
+        "balanced_accuracy": 0.9068126981352831,
+        "accuracy": 0.9287652645861602,
+        "tn": 355,
+        "fp": 50,
+        "fn": 160,
+        "tp": 2383,
+        "samples": 2948,
+        "bona_fide_samples": 405,
+        "spoof_samples": 2543
+      }
+    }
+  },
+  "unseen_target_test": {
+    "auc": 0.5843732859522819,
+    "threshold": 0.23651622235774994,
+    "apcer": 0.5481563015960375,
+    "bpcer": 0.3062605752961083,
+    "acer": 0.42720843844607287,
+    "hter": 0.42720843844607287,
+    "balanced_accuracy": 0.5727915615539272,
+    "accuracy": 0.5112126245847176,
+    "tn": 410,
+    "fp": 181,
+    "fn": 996,
+    "tp": 821,
+    "samples": 2408,
+    "bona_fide_samples": 591,
+    "spoof_samples": 1817
+  },
+  "files": {
+    "source_validation_predictions": "C:\\Users\\luisc\\Desktop\\Faculdade\\Cadeiras\\TESE\\results\\safas\\target_casia_fasd\\source_validation_predictions.csv",
+    "target_test_predictions": "C:\\Users\\luisc\\Desktop\\Faculdade\\Cadeiras\\TESE\\results\\safas\\target_casia_fasd\\target_test_predictions.csv"
+  }
+}
